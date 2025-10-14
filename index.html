@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suporte ao Cliente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Empresa XYZ</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Bem-vindo ao nosso site</h2>
+      <p>Precisa de ajuda? Clique no chat ao vivo no canto inferior direito!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Empresa XYZ - Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="chat-container">
+    <button id="chat-toggle">💬 Chat</button>
+    <div id="chat-box" class="hidden">
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
+      <button id="send-btn">Enviar</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

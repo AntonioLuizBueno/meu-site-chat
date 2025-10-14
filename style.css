@@ -1,0 +1,169 @@
+/* RESET GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding-bottom: 100px;
+  /* espaço para o footer fixo */
+}
+
+/* HEADER */
+header {
+  background: #007BFF;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* NAV */
+nav {
+  background: #f4f4f4;
+  padding: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* MAIN */
+main {
+  padding: 2rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* CHAT */
+#chat-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#chat-toggle {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#chat-box {
+  width: 300px;
+  height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chat-box.hidden {
+  display: none;
+}
+
+#chat-messages {
+  flex: 1;
+  padding: 0.5rem;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+#chat-input {
+  padding: 0.5rem;
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  outline: none;
+}
+
+#send-btn {
+  border: none;
+  padding: 0.5rem;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+/* ------------------------ */
+/* 📱 RESPONSIVO */
+/* ------------------------ */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  #chat-container {
+    right: 10px;
+    left: 10px;
+    bottom: 90px;
+  }
+
+  #chat-box {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    font-size: 0.95rem;
+  }
+
+  #chat-box {
+    height: 300px;
+  }
+
+  #chat-toggle {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+}
